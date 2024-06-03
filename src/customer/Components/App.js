@@ -58,7 +58,7 @@ export function App() {
         searchBoxRef.current.style.top = "65px";
         // searchBoxRef.current.style.left = "0";
         // searchBoxRef.current.style.width = "100%";
-        searchBoxRef.current.style.zIndex = "1000";
+        // searchBoxRef.current.style.zIndex = "1000";
         // searchBoxRef.current.style.background = "#fbc300";
         searchBoxRef.current.style.boxShadow = "0 4px 4px rgba(0, 0, 0, 0.1)";
         searchBoxRef.current.style.padding = "0.5rem 1rem";
