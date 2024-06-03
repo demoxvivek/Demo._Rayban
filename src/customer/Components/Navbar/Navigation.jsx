@@ -316,7 +316,7 @@ export default function Navigation() {
                   {showDropdown && menuItemsData && (
                     <div
                       onMouseLeave={() => setShowDropdown(false)}
-                      className="absolute top-10 right-30% w-[70vw] h-[50vh] border-1 border-red-500"
+                      className="absolute top-10 right-30% w-[50vw] h-[50vh] border-1 border-red-500"
                       style={{ zIndex: 1000 }}
                     >
                       {/* Log menuItemsData to verify its contents */}

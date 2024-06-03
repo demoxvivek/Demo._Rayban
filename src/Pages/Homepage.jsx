@@ -29,42 +29,47 @@ const Homepage = () => {
 
   return (
     <MainContainer>
-      {loading && <Spinner />}
-      <Link to="/search">
-        <div className="firstbanner" style={{ marginBottom: "30px" }}>
-          <img src={banners?.[2].url} alt="" />
-        </div>
-      </Link>
-      <div>
-        <Carousel text={"New Arrivals"} />
-      </div>
-      <div
-        style={{
-          margin: "30px 0",
-          textAlign: "center",
-          fontSize: "23px",
-          fontWeight: "800",
-        }}
-      >
-        <h1>THIS IS WHAT DISRUPTION LOOKS LIKE</h1>
-      </div>
-      <FlexDiv>
-        <Link to="/search">
-          <div className="hover">
-            <img src={banners?.[0].url} alt="" />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          <Link to="/search">
+            <div className="firstbanner" style={{ marginBottom: "30px" }}>
+              <img src={banners?.[2].url} alt="" />
+            </div>
+          </Link>
+          <div>
+            <Carousel text={"New Arrivals"} />
           </div>
-        </Link>
-        <Link to="/search">
-          <div className="hover">
-            <img src={banners?.[1].url} alt="" />
+          <div
+            style={{
+              margin: "30px 0",
+              textAlign: "center",
+              fontSize: "23px",
+              fontWeight: "800",
+            }}
+          >
+            <h1>THIS IS WHAT DISRUPTION LOOKS LIKE</h1>
           </div>
-        </Link>
-      </FlexDiv>
-      <Link to="/search">
-        <div className="firstbanner">
-          <img src={banners?.[3].url} alt="" />
-        </div>
-      </Link>
+          <FlexDiv>
+            <Link to="/search">
+              <div className="hover">
+                <img src={banners?.[0].url} alt="" />
+              </div>
+            </Link>
+            <Link to="/search">
+              <div className="hover">
+                <img src={banners?.[1].url} alt="" />
+              </div>
+            </Link>
+          </FlexDiv>
+          <Link to="/search">
+            <div className="firstbanner">
+              <img src={banners?.[3].url} alt="" />
+            </div>
+          </Link>
+        </>
+      )}
     </MainContainer>
   );
 };

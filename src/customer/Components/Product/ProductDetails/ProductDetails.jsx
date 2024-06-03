@@ -29,6 +29,7 @@ export default function ProductDetails() {
   useEffect(() => {
     const fetchProductById = () => {
       try {
+        setLoading(true);
         receiveProductsById(productId).then((res) => {
           setProductDetails(res);
           setVariants(res.product.variants[0]);
