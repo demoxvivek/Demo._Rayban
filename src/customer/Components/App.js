@@ -52,7 +52,7 @@ export function App() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      const headerBottom = headerRef.current.getBoundingClientRect().bottom;
+      const headerBottom = headerRef?.current?.getBoundingClientRect().bottom;
       if (headerBottom < 0 && window.innerWidth >= 900) {
         searchBoxRef.current.style.position = "fixed";
         searchBoxRef.current.style.top = "65px";
